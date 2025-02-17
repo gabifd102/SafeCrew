@@ -114,6 +114,7 @@ class KeypadController:
         elif state == 3:
             self.entered_pin = ""
             self.lcd_display.clear()
+            self.rgb_light.setColor((128, 0, 128))  # Purple
             self.lcd_display.showText("Pin: ", 1, 0)
         elif state == 4:
             self.lcd_display.showText("Locked Out", 0, 0)
@@ -134,10 +135,13 @@ class KeypadController:
         Log.d(f'State {state} exited on event {event}')
         if state == 2:
             self.lcd_display.clear()
-            # self.lcd_display.showText("Safe Closed", 0, 0)
+            self.lcd_display.showText("Closing Safe", 0, 0)
+            time.sleep(2)
 
         if state == 3:
             self.play_song()
+            self.lcd_display.showText("Pin Updated!", 0, 0)
+            time.sleep(2)
     
     def stateEvent(self, state, event) -> bool:
         Log.d(f'State {state} received event {event}')
@@ -180,7 +184,6 @@ class KeypadController:
             if len(self.entered_pin) == 4:
                 if self._model._curState == 3:  # PIN reset state
                     self.safe.reset_pin(self.entered_pin)
-                    self.lcd_display.showText("Pin Reset", 0, 0)
                     self._model.processEvent("key_entered")
                 else:
                     self._model.processEvent("key_entered")
