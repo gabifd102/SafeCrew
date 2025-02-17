@@ -202,7 +202,7 @@ class KeypadController:
                         else:
                             self.lcd_display.showText("Incorrect Pin", 0, 0)
                             self.lcd_display.showText("Try again", 1, 0)
-                            self.rgb_light.setColor((255, 255, 0))  # Yellow
+                            self.rgb_light.setColor((255, 165, 0))  # Orange
                 self.entered_pin = ""
 
     def play_song(self):

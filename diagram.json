@@ -74,11 +74,11 @@
     [ "servo1:GND", "gnd1:GND", "black", [ "h-67.2", "v-230.4", "h-153.6" ] ],
     [ "rgb1:COM", "gnd1:GND", "black", [ "v9.2", "h-57.5", "v-211.2" ] ],
     [ "lcd1:VCC", "vcc1:VCC", "red", [ "h-105.6", "v-143.9" ] ],
-    [ "bz1:2", "pico:GP28", "blue", [ "h-38", "v96", "h163.2" ] ],
+    [ "bz1:2", "pico:GP28", "orange", [ "h-38", "v96", "h163.2" ] ],
     [ "rgb1:R", "r1:2", "red", [ "v0", "h-86.4" ] ],
-    [ "rgb1:G", "r2:1", "orange", [ "v0" ] ],
-    [ "rgb1:B", "r3:1", "green", [ "v0" ] ],
-    [ "r3:2", "pico:GP27", "green", [ "h0" ] ],
+    [ "rgb1:G", "r2:1", "green", [ "v0" ] ],
+    [ "rgb1:B", "r3:1", "blue", [ "v0" ] ],
+    [ "r3:2", "pico:GP27", "blue", [ "h0" ] ],
     [ "servo1:V+", "vcc1:VCC", "red", [ "h-86.4", "v-230.3", "h-48", "v-67.2" ] ],
     [ "servo1:PWM", "pico:GP16", "green", [ "h-96", "v0.2" ] ],
     [ "keypad1:R1", "pico:GP9", "green", [ "v86.4", "h364.8" ] ],
@@ -102,7 +102,7 @@
       [ "h-28.8", "v-114.9", "h-528", "v259.2", "h249.6", "v115.2", "h57.6" ]
     ],
     [ "r1:1", "pico:GP26", "red", [ "v9.6", "h278.4" ] ],
-    [ "r2:2", "pico:GP22", "orange", [ "h0" ] ]
+    [ "r2:2", "pico:GP22", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }
