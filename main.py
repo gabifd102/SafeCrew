@@ -3,7 +3,7 @@ time.sleep(0.1) #wait for USB to become ready
 
 print("SafeCrew Safe System")
 
-from ServoController import *
+from KeypadController import *
 
-c = ServoController()
+c = KeypadController()
 c.run()

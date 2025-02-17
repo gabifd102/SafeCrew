@@ -12,7 +12,7 @@ from Motors import *
 OPENANGLE = 90
 CLOSEANGLE = 180
 
-class Door:
+class ServoController:
     """ comments """
     def __init__(self, servopin):
         self._servo = Servo(servopin, 'SafeDoor')
@@ -22,7 +22,7 @@ class Door:
         self._servo.setAngle(OPENANGLE)
         self._position = OPENANGLE
 
-    def Close(self):
+    def close(self):
         self._servo.setAngle(CLOSEANGLE)
         
     def isClosed(self)->bool:
